@@ -1,0 +1,40 @@
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: var(--white);
+    }
+
+    p {
+        font-size: 1.5rem;
+        text-align: center;
+        color: var(--white);
+    }
+}
+.home-section {
+    &:hover {
+        background: url('../assets/istockphoto.jpg') no-repeat center center;
+        background-size: cover;
+        transition: all 0.5s ease-in-out;
+        color: white;
+    }
+}
+@media (min-width: 768px) {
+    .home-section {
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.pitch-container {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+        h4 {
+                color: var(--white);
+                width: 100%;
+                text-align: center;
+                padding: 20px;
+            }
+
+                        .elevator-pitch-video {
+                            
+                            width: 100%;
+                            max-width: 800px;
+                           
+                            
+                            margin-bottom: 20px;
+                        }
+            
+                        .elevator-pitch-description {
+                            text-align: center;
+                        }
+    }
+}

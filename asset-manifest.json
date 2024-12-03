@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Code-Innovators-Club/static/css/main.1aa47aa8.css",
+    "main.js": "/Code-Innovators-Club/static/js/main.076aa23e.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Code-Innovators-Club/static/js/787.28cb0dcd.chunk.js",
+    "static/media/B100souris.png": "/Code-Innovators-Club/static/media/B100souris.158dd7b3e26fe2b2f50f.png",
+    "static/media/m111w.jpg": "/Code-Innovators-Club/static/media/m111w.32b4dcd3807f641b6c50.jpg",
+    "static/media/vapp.jpg": "/Code-Innovators-Club/static/media/vapp.e17419e505a0f99ccd5a.jpg",
+    "static/media/Houssam_El_issioui.jpeg": "/Code-Innovators-Club/static/media/Houssam_El_issioui.10de0b85beaaa5df56aa.jpeg",
+    "static/media/abstract-colorful.jpg": "/Code-Innovators-Club/static/media/abstract-colorful.b300685eb17656535c88.jpg",
+    "static/media/houssamElissioui.pdf": "/Code-Innovators-Club/static/media/houssamElissioui.3a751ccf9c375a763447.pdf",
+    "static/media/najd.png": "/Code-Innovators-Club/static/media/najd.0b2a83091d868d97c733.png",
+    "static/media/LOGONAJD.png": "/Code-Innovators-Club/static/media/LOGONAJD.111c58f4d9f70c4a7c2a.png",
+    "static/media/istockphoto.jpg": "/Code-Innovators-Club/static/media/istockphoto.f3253abdb1587eb7285b.jpg",
+    "index.html": "/Code-Innovators-Club/index.html",
+    "main.1aa47aa8.css.map": "/Code-Innovators-Club/static/css/main.1aa47aa8.css.map",
+    "main.076aa23e.js.map": "/Code-Innovators-Club/static/js/main.076aa23e.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Code-Innovators-Club/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1aa47aa8.css",
+    "static/js/main.076aa23e.js"
+  ]
+}

@@ -1,21 +1,11 @@
-import React from 'react';
-
-import { contacts } from '../Data';
-import { socialIcons } from '../Data';
-import { motion } from 'framer-motion';
-import axios from 'axios';
-import swal from 'sweetalert'
-import { useState , useEffect } from "react";
+import React, { useState } from "react";
 import { Button, Form, Input, Steps, Select, Checkbox, message, Rate } from "antd";
-
-
-
-
+import axios from "axios"; // Importer Axios
 
 const { Step } = Steps;
 const { Option } = Select;
 
-const Contact = () => {
+const Questionnaire = () => {
   const [current, setCurrent] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
@@ -26,11 +16,12 @@ const Contact = () => {
     skills: [],
     level: {
       webDevelopment: 1,
-      communication: 1,
+      dataAnalysis: 1,
+      programming: 1,
       databases: 1,
-      marketingdigital: 1,
-      comptabilité: 1,
-      management: 1,
+      mobileDevelopment: 1,
+      cybersecurity: 1,
+      networking: 1,
       ai: 1,
     },
     tools: '',
@@ -60,7 +51,7 @@ const Contact = () => {
     {
       title: "Informations Générales",
       content: (
-        <Form form={form}  layout="vertical" name="generalInfo" initialValues={formData}>
+        <Form form={form} layout="vertical" name="generalInfo" initialValues={formData}>
           <Form.Item
             name="name"
             label="Nom et Prénom"
@@ -142,19 +133,19 @@ const Contact = () => {
               <Option value="Droit">Droit</Option>
               <Option value="GRHTN">GRHTN</Option>
               <Option value="Analyse économique">Analyse économique</Option>
-              <Option value="Management des médias sociaux">Management des médias sociaux</Option>
+              <Option value="Management des médias">Management des médias</Option>
             </Select>
           </Form.Item>
         </Form>
       ),
     },
     {
-      title: "Compétence Technique",
+      title: "Compétences Techniques",
       content: (
         <Form form={form} layout="vertical" name="technicalSkills" initialValues={formData}>
           <Form.Item
             name="programmingLanguages"
-            label="Quels langages de programmation connaisez-vous ?"
+            label="Quels langages de programmation maîtrisez-vous ?"
             rules={[{ required: true, message: "Veuillez sélectionner au moins un langage." }]}
           >
             <Checkbox.Group value={formData.programmingLanguages} onChange={(checkedValues) => handleCheckboxChange('programmingLanguages', checkedValues)}>
@@ -164,9 +155,10 @@ const Contact = () => {
               <Checkbox value="C++">C++</Checkbox>
               <Checkbox value="PHP">PHP</Checkbox>
               <Checkbox value="C">C</Checkbox>
-              <Checkbox value="Dart">Dart</Checkbox>
-              <Checkbox value="Autre">Autre</Checkbox>
-              <Checkbox value="Aucun">Aucun</Checkbox>
+              <Checkbox value="Ruby">Ruby</Checkbox>
+              <Checkbox value="Kotlin">Kotlin</Checkbox>
+              <Checkbox value="Swift">Swift</Checkbox>
+              <Checkbox value="Other">Autre</Checkbox>
             </Checkbox.Group>
           </Form.Item>
           <Form.Item
@@ -178,74 +170,45 @@ const Contact = () => {
               <Checkbox value="Développement web">Développement web</Checkbox>
               <Checkbox value="Analyse de données">Analyse de données</Checkbox>
               <Checkbox value="Intelligence artificielle">Intelligence artificielle</Checkbox>
+              <Checkbox value="Cybersécurité">Cybersécurité</Checkbox>
               <Checkbox value="Réseaux informatiques">Réseaux informatiques</Checkbox>
               <Checkbox value="Développement mobile">Développement mobile (iOS/Android)</Checkbox>
-              <Checkbox value="Ressources Humaines">Ressources Humaines</Checkbox>
-              <Checkbox value="Marketing Digital">Marketing Digital</Checkbox>
+              <Checkbox value="DevOps">DevOps</Checkbox>
+              <Checkbox value="Data Science">Data Science</Checkbox>
               <Checkbox value="UX/UI Design">UX/UI Design</Checkbox>
-              <Checkbox value="Autre">Autre</Checkbox>
-              <Checkbox value="Aucun">Aucun</Checkbox>
             </Checkbox.Group>
           </Form.Item>
           <Form.Item
             name="level"
             label="Sur une échelle de 1 à 5, évaluez votre niveau dans ces domaines :"
           >
-           <div className="container">
-  <div className="item">
-    <label>Développement web</label>
-    <Rate
-      value={formData.level.webDevelopment}
-      onChange={(value) => setFormData({ ...formData, level: { ...formData.level, webDevelopment: value } })}
-    />
-  </div>
-  <div className="item">
-    <label>Bases de données</label>
-    <Rate
-      value={formData.level.databases}
-      onChange={(value) => setFormData({ ...formData, level: { ...formData.level, databases: value } })}
-    />
-  </div>
-  <div className="item">
-    <label>Comptabilité</label>
-    <Rate
-      value={formData.level.comptabilité}
-      onChange={(value) => setFormData({ ...formData, level: { ...formData.level, comptabilité: value } })}
-    />
-  </div>
-  <div className="item">
-    <label>Communication</label>
-    <Rate
-      value={formData.level.communication}
-      onChange={(value) => setFormData({ ...formData, level: { ...formData.level, communication: value } })}
-    />
-  </div>
-  <div className="item">
-    <label>Management</label>
-    <Rate
-      value={formData.level.management}
-      onChange={(value) => setFormData({ ...formData, level: { ...formData.level, management: value } })}
-    />
-  </div>
-  <div className="item">
-    <label>Intelligence artificielle</label>
-    <Rate
-      value={formData.level.ai}
-      onChange={(value) => setFormData({ ...formData, level: { ...formData.level, ai: value } })}
-    />
-  </div>
-</div>
-
-
+            <div>
+              <label>Développement web</label>
+              <Rate value={formData.level.webDevelopment} onChange={(value) => setFormData({ ...formData, level: { ...formData.level, webDevelopment: value } })} />
+              <label>Analyse de données</label>
+              <Rate value={formData.level.dataAnalysis} onChange={(value) => setFormData({ ...formData, level: { ...formData.level, dataAnalysis: value } })} />
+              <label>Programmation</label>
+              <Rate value={formData.level.programming} onChange={(value) => setFormData({ ...formData, level: { ...formData.level, programming: value } })} />
+              <label>Bases de données</label>
+              <Rate value={formData.level.databases} onChange={(value) => setFormData({ ...formData, level: { ...formData.level, databases: value } })} />
+              <label>Développement mobile</label>
+              <Rate value={formData.level.mobileDevelopment} onChange={(value) => setFormData({ ...formData, level: { ...formData.level, mobileDevelopment: value } })} />
+              <label>Cybersécurité</label>
+              <Rate value={formData.level.cybersecurity} onChange={(value) => setFormData({ ...formData, level: { ...formData.level, cybersecurity: value } })} />
+              <label>Réseaux informatiques</label>
+              <Rate value={formData.level.networking} onChange={(value) => setFormData({ ...formData, level: { ...formData.level, networking: value } })} />
+              <label>Intelligence artificielle</label>
+              <Rate value={formData.level.ai} onChange={(value) => setFormData({ ...formData, level: { ...formData.level, ai: value } })} />
+            </div>
           </Form.Item>
           <Form.Item
             name="tools"
-            label="Quels outils informatiques utilisez-vous régulièrement ?"
+            label="Quels outils ou environnements de développement utilisez-vous régulièrement ?"
             rules={[{ required: true, message: "Veuillez entrer vos outils." }]}
           >
             <Input.TextArea
               rows={4}
-              placeholder="Indiquez les outils informatiques que vous utilisez régulièrement (ex : Excel, Word, PowerPoint, Photoshop, etc.)."
+              placeholder="Exemple : IDE (VS Code, PyCharm), Frameworks (React, Django, Flask), Systèmes de gestion de base de données (MySQL, MongoDB), etc."
               value={formData.tools}
               onChange={(e) => setFormData({ ...formData, tools: e.target.value })}
             />
@@ -312,9 +275,10 @@ const Contact = () => {
               <Checkbox value="Développement d’applications">Développement d’applications</Checkbox>
               <Checkbox value="Analyse de données">Analyse de données</Checkbox>
               <Checkbox value="Intelligence artificielle">Intelligence artificielle</Checkbox>
-              <Checkbox value="Machine learning">Machine learning</Checkbox>
-            
-               
+              <Checkbox value="Blockchain">Blockchain</Checkbox>
+              <Checkbox value="Réalité virtuelle / Augmentée">Réalité virtuelle / Augmentée</Checkbox>
+              <Checkbox value="Cybersécurité">Cybersécurité</Checkbox>
+              <Checkbox value="DevOps">DevOps</Checkbox>
             </Checkbox.Group>
           </Form.Item>
           <Form.Item
@@ -434,69 +398,53 @@ const Contact = () => {
   };
 
   const handleSubmit = () => {
-    axios
-      .post("https://api.sheetbest.com/sheets/8fc1f7e0-2472-4cac-9853-e3607cb2b1bf", formData)
+    axios.post("https://api.sheetbest.com/sheets/8fc1f7e0-2472-4cac-9853-e3607cb2b1bf", formData)
       .then(response => {
-        // Show success message
         message.success("Formulaire soumis avec succès!");
-        
-        // Refresh the page after showing the success message
-        setTimeout(() => {
-          window.location.reload();
-        }, 1500); // Delay to let the user see the success message
-        
+        setFormData({
+          name: '',
+          email: '',
+          year: '',
+          filiere: '',
+          programmingLanguages: [],
+          skills: [],
+          level: {
+            webDevelopment: 1,
+            dataAnalysis: 1,
+            programming: 1,
+            databases: 1,
+            mobileDevelopment: 1,
+            cybersecurity: 1,
+            networking: 1,
+            ai: 1,
+          },
+          tools: '',
+          projectDescription: '',
+          hackathon: '',
+          hackathonDetails: '',
+          interests: [],
+          availability: '',
+          onlinePreference: '',
+          longTermProjects: '',
+          hoursPerWeek: '',
+          mentor: false,
+          mentorDetails: '',
+        });
+        setCurrent(0);
       })
       .catch(error => {
-        // Show error message
         message.error("Erreur lors de la soumission du formulaire.");
       });
   };
-  
-    
 
-
-
-
-
-
-
-
-
-  
-
-   
-
-  
-
-   
- 
   return (
-    <div className="container " id="contact">
-      <motion.div
-        initial={{opacity: 0}}
-        whileInView={{y: [-50, 0], opacity: 1}} 
-        className="title"
-      >
-            
-            <h2 >Questionnaire</h2>
-      </motion.div>
-      
-      <div className="contact_form">
-        <motion.div
-          initial={{x: 0, opacity: 0}}
-          whileInView={{ x: [-150,0], opacity: 1 }}
-          transition={{duration: 1}}
-          className='contact_left_container'>
-          <h3> Bonjour</h3>
-          <p className='contact_text'>Merci de prendre le temps de remplir ce questionnaire. Vos réponses nous aideront à mieux organiser nos activités et à comprendre vos besoins et compétences dans le domaine informatique. Cela ne prendra que 5 à 10 minutes..</p>
-          
-          <div>
+    <div>
       <Steps current={current}>
         {steps.map(item => (
           <Step key={item.title} title={item.title} />
         ))}
       </Steps>
-      <div className="steps-content">{steps[current].content}</div>
+      <div className=" ">{steps[current].content}</div>
       <div className="steps-action">
         {current < steps.length - 1 && (
           <Button type="primary" onClick={next}>
@@ -515,16 +463,7 @@ const Contact = () => {
         )}
       </div>
     </div>
-         
-        </motion.div>
-         
-        
+  );
+};
 
-        
-      </div>
-     
-    </div>
-  )
-}
-
-export default Contact
+export default Questionnaire;

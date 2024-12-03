@@ -3,8 +3,8 @@ import { DiJavascript } from "react-icons/di";
 import { SiTypescript } from "react-icons/si";
 import { BsMedium } from "react-icons/bs";
 
-import category1 from "./assets/vapp.jpg";
-import category2 from "./assets/vapp.jpg";
+import category1 from "./assets/B100souris.png";
+import category2 from "./assets/m111w.jpg";
 import category3 from "./assets/vapp.jpg";
 import category4 from "./assets/vapp.jpg";
 
@@ -31,31 +31,18 @@ export const socialIcons = [
     {
       id: 1,
       image: category1,
-      title: "info App",
-      description: "Lorem ipsum is a dummy text without any sense. It is a sequence of Latin words ",
+      title: "Souris Logitech B100",
+      description: "🖱️ Découvrez la souris Logitech B100, simple et efficace ! ✨ Caractéristiques principales : Souris optique fiable pour une navigation fluide Conception ambidextre pour droitiers et gauchers Prise en charge USB plug-and-play 💰 Prix exceptionnel : 95 MAD seulement ! 🔹 État : Produit neuf dans son emballage d’origine  🔹 Garantie : 1 an",
       video: "",
     },
     {
       id: 2,
       image: category2,
-      title: "LoyaLanding",
-      description: "Lorem ipsum is a dummy text without any sense. It is a sequence of Latin words ",
+      title: "HP LaserJet M111w",
+      description: "🖨️ Imprimante Laser Monochrome HP LaserJet M111w (7MD68A)🚀 Caractéristiques principales :Vitesse d'impression noir : 20 pages par minute (norme ISO)Qualité d'impression noire : Jusqu'à 600 x 600 pppVolume de pages mensuel recommandé : 100 à 1000Impression recto/verso : NonFonctionne avec : 1 cartouche d'encre noire",
       video :"",
     },
-    {
-      id: 3,
-      image: category3,
-      title: "UI_Chat",
-      description: "Lorem ipsum is a dummy text without any sense. It is a sequence of Latin words ",
-      video : "",
-    },
-    {
-      id: 4,
-      image: category4,
-      title: "Music",
-      description: "Lorem ipsum is a dummy text without any sense. It is a sequence of Latin words ",
-      video : "",
-    },
+    
     
   ];
 
@@ -175,11 +162,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaPaperPlane />,
-    infoText: "houssam-prof@hotmail.fr"
+    infoText: "enajdinfotechnologie@gmail.com"
   },
-  {
-    id: 2,
-    icon: <FaPhoneAlt />,
-    infoText: "+212-679-76-64-19"
-  }
+   
 ]

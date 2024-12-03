@@ -1,5 +1,6 @@
 import React from "react";
-import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter, BsWhatsapp } from "react-icons/bs";
+import portfolio from "../assets/najd.png"
 function Footer() {
   
   const socialLinks = [
@@ -14,21 +15,17 @@ function Footer() {
     <footer className="py-3 mx-2">
       <div className="brand-container">
         <div className="brand">
-          <span>elissiouihoussam</span>
+           
           
         </div>
         <p className="description">
           
         </p>
 
-        <ul className="social-links">
-        <a href="https://web.facebook.com/elissioui" target={"_blank"}><li><BsFacebook /></li></a> 
-        <a href="https://www.instagram.com/elissiouihoussam/" target={"_blank"}> <li><BsInstagram /></li> </a>
-        <a href="https://twitter.com/HIssioui" target={"_blank"}> <li><BsTwitter /></li> </a>
-        <a href="https://www.linkedin.com/in/houssam-el-issioui-646104236/" target={"_blank"}> <li><BsLinkedin /></li> </a>
-        </ul>
+        
         <div className="description">
-          <p>&copy; 2023 All Rights Reserved</p>
+
+<p>&copy; 2024 Tous droits réservés</p>
         </div>
       </div>
       

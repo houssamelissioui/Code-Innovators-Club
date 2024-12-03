@@ -2,6 +2,8 @@ import React , {useState}  from "react";
 import Modal from "react-modal";
 import { categories } from '../Data';
 import { motion, AnimatePresence } from "framer-motion"
+import "./Questionnaire.css";
+
 
 
 function Categories() {
@@ -30,9 +32,9 @@ function Categories() {
       <div className="categories-container mx-3 py-3" id="projects" >
       <div className="container">
         <div className="title-container">
-          <h2>Projects</h2>
+          <h2>Produits</h2>
         </div>
-        <div className="categories"  >
+        <div className="categories d-flex justify-content-center flex-wrap"  >
             {categories.map(({ image, title, description , video }, index) => {
             return (
             <div className="category" key={index} onClick={()=> getData(image,title, video, description)}>
@@ -74,7 +76,7 @@ function Categories() {
         )    
       }   
       </div>
-       <button>show All</button>
+       
       </div>
       </div>
     </div>

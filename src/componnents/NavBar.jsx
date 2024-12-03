@@ -3,7 +3,8 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import {MdClose} from 'react-icons/md'
 import {ImSun} from 'react-icons/im'
 import {BsFillMoonFill} from 'react-icons/bs'
-import {  Container , Nav } from "react-bootstrap";
+import logoimg from '../assets/najd.png'
+
 
 
 
@@ -23,11 +24,11 @@ function Navbar({ changeTheme, currentTheme }) {
   return (
 
     <nav>
-      <div className="container py-3 mx-3">
+      <div className="container py-2 mx-3">
         <div className="brand">
           <a href='#'>
           
-          <span>elissiouihoussam</span>
+          <span>Code Innovators Club (CIC)</span>
           </ a>
           
         </div>
@@ -54,16 +55,12 @@ function Navbar({ changeTheme, currentTheme }) {
           <div className={`links ${navState ? "responsive-toggle" : ""}`}>
             <ul>
               <li>
-                <a href="#"> Home</a>
+                <a href="#"> Accueil</a>
               </li>
+               
+               
               <li>
-                <a href="#skills"> About</a>
-              </li>
-              <li>
-                <a href="#projects"> Projects</a>
-              </li>
-              <li>
-                <a href="#contact"> Contact</a>
+                <a href="#contact"> Questionnaire</a>
               </li>
               <li>
                 

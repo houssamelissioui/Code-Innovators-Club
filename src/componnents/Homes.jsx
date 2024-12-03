@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import portfolio from "../assets/Houssam_El_issioui.jpeg"
+import portfolio from "../assets/LOGONAJD.png"
 import { useSpring, animated } from 'react-spring';
 
 import { motion } from 'framer-motion'
@@ -40,34 +40,34 @@ const Home = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="profile">
-        <img src={portfolio} alt="portfolio" />
+         
       </div>
       <div className="profile_text">
-        <h3 className='name'>Hi, I'm <span>Houssam</span> </h3>
-        <span className='job'> Developer Based on Morocco</span>
-        <span className='text'>Learn more about my work <br /> and contact me.</span>
+        <h3 className='name'> <span>Code Innovators Club (CIC)</span> </h3>
+        <span className='job'>  </span>
+        <span className='text'>Rejoindre notre Club passionnée<br /> par les Technologies d'informations. 🖥️🖨️🔧.</span>
         <motion.a
           href="#contact"
           whileHover={{ scale: 1.1 }}
           variants={moveVariants}
           animate="animation"
         >
-          Hire me</motion.a>
+          Passer au Questionnaire</motion.a>
         <div
           className="web"
 
         >
-          Web Developer
+          Langage de programmation
         </div>
         <div
           className="ui"
         >
-          UI/UX Designer
+          Analyse de données
         </div>
         <div
           className="freelance"
         >
-          Ads Manager
+          Création Digital
         </div>
       </div>
     </motion.div>

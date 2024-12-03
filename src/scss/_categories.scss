@@ -17,7 +17,8 @@
                 align-items: center;
                 justify-content: center;
                 animation: fadeIn 0.5s ease-in-out;
-            }
+                -webkit-animation: fadeIn 0.5s ease-in-out;
+}
         
             .modal-content {
                 background-color:  var(--blue);
@@ -102,11 +103,11 @@
 
         .categories {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             width: 100%;
             gap: 1rem;
             img {
-                width: 45%;
+                width: 75%;
             }
 
             .category {
@@ -154,7 +155,7 @@
     @media only screen and (min-device-width: 768px) {
         .container {
             .categories {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     }

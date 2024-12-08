@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Code-Innovators-Club/static/css/main.1aa47aa8.css",
-    "main.js": "/Code-Innovators-Club/static/js/main.076aa23e.js",
+    "main.js": "/Code-Innovators-Club/static/js/main.a2f64599.js",
     "static/js/787.28cb0dcd.chunk.js": "/Code-Innovators-Club/static/js/787.28cb0dcd.chunk.js",
     "static/media/B100souris.png": "/Code-Innovators-Club/static/media/B100souris.158dd7b3e26fe2b2f50f.png",
     "static/media/m111w.jpg": "/Code-Innovators-Club/static/media/m111w.32b4dcd3807f641b6c50.jpg",
@@ -14,11 +14,11 @@
     "static/media/istockphoto.jpg": "/Code-Innovators-Club/static/media/istockphoto.f3253abdb1587eb7285b.jpg",
     "index.html": "/Code-Innovators-Club/index.html",
     "main.1aa47aa8.css.map": "/Code-Innovators-Club/static/css/main.1aa47aa8.css.map",
-    "main.076aa23e.js.map": "/Code-Innovators-Club/static/js/main.076aa23e.js.map",
+    "main.a2f64599.js.map": "/Code-Innovators-Club/static/js/main.a2f64599.js.map",
     "787.28cb0dcd.chunk.js.map": "/Code-Innovators-Club/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1aa47aa8.css",
-    "static/js/main.076aa23e.js"
+    "static/js/main.a2f64599.js"
   ]
 }

@@ -4,6 +4,7 @@ import {MdClose} from 'react-icons/md'
 import {ImSun} from 'react-icons/im'
 import {BsFillMoonFill} from 'react-icons/bs'
 import logoimg from '../assets/najd.png'
+import Link from 'antd/es/typography/Link';
 
 
 
@@ -63,7 +64,7 @@ function Navbar({ changeTheme, currentTheme }) {
                 <a href="#contact"> Questionnaire</a>
               </li>
               <li>
-                
+              <Link to="/conference">Conférence</Link>
               </li>
               <li onClick={changeTheme} className="color-mode">
                 {currentTheme === "dark" ? (
